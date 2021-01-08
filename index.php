@@ -1,4 +1,5 @@
 <?php $__title = 'CRUD operations in PHP'; ?><!DOCTYPE html>
+<?php require_once('lib/class.dbglog.php'); ?>
 <?php require_once('db.php'); ?>
 <html>
 <head>
@@ -9,26 +10,11 @@
 <body>
 <h1><?php echo $__title; ?></h1>
 
-<?php
-$result = $mysqli->query("SELECT username FROM users");
-$users = $result->fetch_array(MYSQLI_ASSOC);
+<p><a href="index.php">Refresh</a></p>
 
-$data = $users;
-?>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="2">Users</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<?php include '_insert.php'; ?>
+<?php include '_select.php'; ?>
+<?php $data = $users; ?>
 
 <pre style="background: grey; color: white;">
 <?php var_dump($data); ?>
