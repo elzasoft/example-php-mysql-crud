@@ -10,7 +10,7 @@
   </thead>
   <tbody>
     <?php
-    $result = $mysqli->query("SELECT id, username, fullname FROM users");
+    $result = $mysqli->query("SELECT id, username, fullname FROM users ORDER by username ASC");
 
     $users = array();
     if (mysqli_num_rows($result) > 0) {
