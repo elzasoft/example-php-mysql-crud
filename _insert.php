@@ -5,22 +5,21 @@
     Username: <input type="text" name="username" id="username">
   </label>
   <br>
-  <label for="username">
+  <label for="password">
     Password: <input type="password" name="password" id="password">
   </label>
   <br>
-  <label for="username">
+  <label for="fullname">
     Full Name: <input type="text" name="fullname" id="fullname">
   </label>
   <br>
 
   <input type="hidden" name="create" value="1">
-  <input type="submit" value="Create user">
+  <input type="submit" value="Create">
 </form>
 
 <?php
 if (isset($_POST["create"])) {
-  Dbg::log($_POST);
 
   $result = $mysqli->query(sprintf(
     "INSERT INTO `users` (`username`, `password`, `fullname`) VALUES ('%s', '%s', '%s')",

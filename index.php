@@ -14,6 +14,7 @@
 <p><a href="index.php">Refresh</a></p>
 
 <?php include '_insert.php'; ?>
+<?php include '_update.php'; ?>
 <?php include '_select.php'; ?>
 <?php $data = $users; ?>
 
