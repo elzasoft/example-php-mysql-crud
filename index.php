@@ -15,6 +15,7 @@
 
 <?php include '_insert.php'; ?>
 <?php include '_update.php'; ?>
+<?php include '_delete.php'; ?>
 <?php include '_select.php'; ?>
 <?php $data = $users; ?>
 
