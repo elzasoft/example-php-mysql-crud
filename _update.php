@@ -2,6 +2,9 @@
 
 <?php
 if (isset($_GET["update"])) {
+  $_POST['fullname'] = $mysqli->real_escape_string($_POST['fullname']);
+  $_POST['updateId'] = $mysqli->real_escape_string($_POST['updateId']);
+
   $result = $mysqli->query(sprintf(
     "UPDATE `users` SET `fullname` = '%s' WHERE `id` = %d",
     $_POST['fullname'], $_GET['updateId']

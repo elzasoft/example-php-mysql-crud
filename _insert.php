@@ -20,6 +20,10 @@
 
 <?php
 if (isset($_POST["create"])) {
+  $_POST['username'] = $mysqli->real_escape_string($_POST['username']);
+  $_POST['password'] = $mysqli->real_escape_string($_POST['password']);
+  $_POST['fullname'] = $mysqli->real_escape_string($_POST['fullname']);
+
 
   $result = $mysqli->query(sprintf(
     "INSERT INTO `users` (`username`, `password`, `fullname`) VALUES ('%s', '%s', '%s')",
