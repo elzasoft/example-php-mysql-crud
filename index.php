@@ -3,9 +3,7 @@
 <?php require_once('db.php'); ?>
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <title><?php echo $__title; ?></title>
+  <?php require_once('_common.php'); ?>
 </head>
 
 <body>
@@ -13,7 +11,9 @@
 
 <p><a href="index.php">Refresh</a></p>
 
-<?php include '_insert.php'; ?>
+<section class="create">
+  <?php include '_insert.php'; ?>
+</section>
 <?php include '_update.php'; ?>
 <?php include '_delete.php'; ?>
 <?php include '_select.php'; ?>
