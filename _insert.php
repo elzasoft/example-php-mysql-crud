@@ -2,20 +2,22 @@
 
 <form method="POST" action="index.php">
   <label for="username">
-    Username: <input type="text" name="username" id="username">
+    <span class="title">Username:</span> <input type="text" name="username" id="username">
   </label>
-  <br>
+
   <label for="password">
-    Password: <input type="password" name="password" id="password">
+    <span class="title">Password:</span> <input type="password" name="password" id="password">
   </label>
-  <br>
+
   <label for="fullname">
-    Full Name: <input type="text" name="fullname" id="fullname">
+    <span class="title">Full Name:</span> <input type="text" name="fullname" id="fullname">
   </label>
-  <br>
 
   <input type="hidden" name="create" value="1">
-  <input type="submit" value="Create">
+
+  <label for="createButton">
+    <input type="submit" value="Create" id="createButton">
+  </label>
 </form>
 
 <?php
