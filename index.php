@@ -14,9 +14,23 @@
 <section class="create">
   <?php include '_insert.php'; ?>
 </section>
-<?php include '_update.php'; ?>
-<?php include '_delete.php'; ?>
-<?php include '_select.php'; ?>
+
+<?php if (isset($_GET["update"]) or isset($_GET['updateId'])) { ?>
+  <section class="update">
+    <?php include '_update.php'; ?>
+  </section>
+<?php } ?>
+
+<?php if (isset($_GET['deleteId'])) { ?>
+  <section class="delete">
+    <?php include '_delete.php'; ?>
+  </section>
+<?php } ?>
+
+<section class="read">
+  <?php include '_select.php'; ?>
+</section>
+
 <?php $data = $users; ?>
 
 <pre style="background: grey; color: white;">
